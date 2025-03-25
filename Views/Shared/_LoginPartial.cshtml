@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="navbar-nav align-items-center">
+@if (SignInManager.IsSignedIn(User))
+{
+    var user = await UserManager.GetUserAsync(User);
+    var roles = await UserManager.GetRolesAsync(user);
+    string role = roles.Any() ? roles.First() : "Người dùng"; // Lấy role đầu tiên hoặc mặc định "Người dùng"
+
+    <li class="nav-item">
+        <a id="manage" class="nav-link text-dark fw-bold" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+            <i class="fas fa-user-circle"></i> @user.FullName (@role)
+        </a>
+    </li>
+
+    <li class="nav-item ms-3"> <!-- Tạo khoảng cách bằng Bootstrap margin -->
+        <form id="logoutForm" class="form-inline d-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button id="logout" type="submit" class="nav-link btn btn-link text-danger border-0 fw-bold">
+                <i class="fas fa-sign-out-alt"></i> Đăng xuất
+            </button>
+        </form>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark fw-bold" id="register" asp-area="Identity" asp-page="/Account/Register">
+            <i class="fas fa-user-plus"></i> Đăng ký
+        </a>
+    </li>
+    <li class="nav-item ms-2"> <!-- Thêm khoảng cách giữa Đăng ký và Đăng nhập -->
+        <a class="nav-link text-dark fw-bold" id="login" asp-area="Identity" asp-page="/Account/Login">
+            <i class="fas fa-sign-in-alt"></i> Đăng nhập
+        </a>
+    </li>
+}
+</ul>
+<style>
+    .nav-item {
+    margin-right: 15px; /* Tạo khoảng cách giữa các item */
+}
+
+#logout {
+    transition: all 0.3s ease;
+}
+
+#logout:hover {
+    color: white !important;
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+</style>
