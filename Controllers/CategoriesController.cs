@@ -76,7 +76,7 @@ namespace WebsiteBanHang.Controllers
                 return NotFound();
             }
 
-            existingCategory.Name = category.Name; 
+            existingCategory.Name = category.Name;
             await _categoryRepository.UpdateAsync(existingCategory);
 
             return RedirectToAction(nameof(Index));

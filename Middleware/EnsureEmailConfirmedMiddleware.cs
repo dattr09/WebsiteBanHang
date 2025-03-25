@@ -1,6 +1,4 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using System.Threading.Tasks;
 using WebsiteBanHang.Models;
 
 public class EnsureEmailConfirmedMiddleware

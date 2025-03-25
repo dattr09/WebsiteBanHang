@@ -14,7 +14,7 @@ namespace WebsiteBanHang.Repositories
         {
             // return await _context.Products.ToListAsync();
             return await _context.Products
-            .Include(p => p.Category) // Include thông tin về category
+            .Include(static p => p.Category) // Include thông tin về category
             .ToListAsync();
         }
         public async Task<Product> GetByIdAsync(int id)

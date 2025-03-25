@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using WebsiteBanHang.Models;
 using WebsiteBanHang.ViewModels;
 

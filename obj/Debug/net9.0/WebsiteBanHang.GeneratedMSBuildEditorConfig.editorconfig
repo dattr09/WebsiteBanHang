@@ -160,12 +160,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/DatG/Desktop/WebsiteBanHang/Views/Checkout/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/DatG/Desktop/WebsiteBanHang/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DatG/Desktop/WebsiteBanHang/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DatG/Desktop/WebsiteBanHang/Views/OrderCompleted/OrderCompleted.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJDb21wbGV0ZWRcT3JkZXJDb21wbGV0ZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DatG/Desktop/WebsiteBanHang/Views/Product/Add.cshtml]
@@ -198,6 +206,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/DatG/Desktop/WebsiteBanHang/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DatG/Desktop/WebsiteBanHang/Views/ShoppingCart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DatG/Desktop/WebsiteBanHang/Views/_ViewImports.cshtml]

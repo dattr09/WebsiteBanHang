@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -35,21 +34,21 @@ namespace WebsiteBanHang.Migrations
 
             _ = migrationBuilder.CreateTable(
                 name: "AspNetRoles",
-                columns: table => new
+                columns: static table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
-                constraints: table =>
+                constraints: static table =>
                 {
-                    _ = table.PrimaryKey("PK_AspNetRoles", x => x.Id);
+                    _ = table.PrimaryKey("PK_AspNetRoles", static x => x.Id);
                 });
 
             _ = migrationBuilder.CreateTable(
                 name: "AspNetUsers",
-                columns: table => new
+                columns: static table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -67,14 +66,14 @@ namespace WebsiteBanHang.Migrations
                     LockoutEnabled = table.Column<bool>(type: "bit", nullable: false),
                     AccessFailedCount = table.Column<int>(type: "int", nullable: false)
                 },
-                constraints: table =>
+                constraints: static table =>
                 {
-                    _ = table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                    _ = table.PrimaryKey("PK_AspNetUsers", static x => x.Id);
                 });
 
             _ = migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
-                columns: table => new
+                columns: static table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
@@ -82,12 +81,12 @@ namespace WebsiteBanHang.Migrations
                     ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
-                constraints: table =>
+                constraints: static table =>
                 {
-                    _ = table.PrimaryKey("PK_AspNetRoleClaims", x => x.Id);
+                    _ = table.PrimaryKey("PK_AspNetRoleClaims", static x => x.Id);
                     _ = table.ForeignKey(
                         name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
-                        column: x => x.RoleId,
+                        column: static x => x.RoleId,
                         principalTable: "AspNetRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -95,7 +94,7 @@ namespace WebsiteBanHang.Migrations
 
             _ = migrationBuilder.CreateTable(
                 name: "AspNetUserClaims",
-                columns: table => new
+                columns: static table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
@@ -103,12 +102,12 @@ namespace WebsiteBanHang.Migrations
                     ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
-                constraints: table =>
+                constraints: static table =>
                 {
-                    _ = table.PrimaryKey("PK_AspNetUserClaims", x => x.Id);
+                    _ = table.PrimaryKey("PK_AspNetUserClaims", static x => x.Id);
                     _ = table.ForeignKey(
                         name: "FK_AspNetUserClaims_AspNetUsers_UserId",
-                        column: x => x.UserId,
+                        column: static x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -116,19 +115,19 @@ namespace WebsiteBanHang.Migrations
 
             _ = migrationBuilder.CreateTable(
                 name: "AspNetUserLogins",
-                columns: table => new
+                columns: static table => new
                 {
                     LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ProviderKey = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ProviderDisplayName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
-                constraints: table =>
+                constraints: static table =>
                 {
-                    _ = table.PrimaryKey("PK_AspNetUserLogins", x => new { x.LoginProvider, x.ProviderKey });
+                    _ = table.PrimaryKey("PK_AspNetUserLogins", static x => new { x.LoginProvider, x.ProviderKey });
                     _ = table.ForeignKey(
                         name: "FK_AspNetUserLogins_AspNetUsers_UserId",
-                        column: x => x.UserId,
+                        column: static x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -136,23 +135,23 @@ namespace WebsiteBanHang.Migrations
 
             _ = migrationBuilder.CreateTable(
                 name: "AspNetUserRoles",
-                columns: table => new
+                columns: static table => new
                 {
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     RoleId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
-                constraints: table =>
+                constraints: static table =>
                 {
-                    _ = table.PrimaryKey("PK_AspNetUserRoles", x => new { x.UserId, x.RoleId });
+                    _ = table.PrimaryKey("PK_AspNetUserRoles", static x => new { x.UserId, x.RoleId });
                     _ = table.ForeignKey(
                         name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
-                        column: x => x.RoleId,
+                        column: static x => x.RoleId,
                         principalTable: "AspNetRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     _ = table.ForeignKey(
                         name: "FK_AspNetUserRoles_AspNetUsers_UserId",
-                        column: x => x.UserId,
+                        column: static x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -160,19 +159,19 @@ namespace WebsiteBanHang.Migrations
 
             _ = migrationBuilder.CreateTable(
                 name: "AspNetUserTokens",
-                columns: table => new
+                columns: static table => new
                 {
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Value = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
-                constraints: table =>
+                constraints: static table =>
                 {
-                    _ = table.PrimaryKey("PK_AspNetUserTokens", x => new { x.UserId, x.LoginProvider, x.Name });
+                    _ = table.PrimaryKey("PK_AspNetUserTokens", static x => new { x.UserId, x.LoginProvider, x.Name });
                     _ = table.ForeignKey(
                         name: "FK_AspNetUserTokens_AspNetUsers_UserId",
-                        column: x => x.UserId,
+                        column: static x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);

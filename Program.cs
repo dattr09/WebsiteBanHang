@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Cấu hình DbContext
+// 1️⃣ Cấu hình Database (Đặt trước builder.Build())
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Cấu hình Identity
+// 2️⃣ Cấu hình Identity
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders()
@@ -18,24 +18,33 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
-    options.SignIn.RequireConfirmedEmail = true; // Chặn đăng nhập nếu email chưa xác thực
+    options.SignIn.RequireConfirmedEmail = false; // ✅ Tắt xác nhận email khi đăng nhập
 });
 
-// Cấu hình Email Sender
+// 3️⃣ Cấu hình Email Sender (Nếu sử dụng)
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 
-// Đăng ký Repository
+// 4️⃣ Đăng ký Repository
 builder.Services.AddScoped<IProductRepository, EFProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, EFCategoryRepository>();
 
-// Cấu hình MVC + Razor Pages
+// 5️⃣ Cấu hình MVC + Razor Pages
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
+// 6️⃣ Cấu hình Session
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 var app = builder.Build();
 
-// Cấu hình Middleware
+// 7️⃣ Cấu hình Middleware
 if (!app.Environment.IsDevelopment())
 {
     _ = app.UseExceptionHandler("/Home/Error");
@@ -43,15 +52,18 @@ if (!app.Environment.IsDevelopment())
 
 app.UseStaticFiles();
 app.UseRouting();
-app.UseAuthentication(); // Thêm xác thực người dùng
-app.UseAuthorization();  // Cấp quyền
 
-// Định tuyến
+app.UseSession(); // ✅ Đặt trước Authentication
+app.UseAuthentication(); // ✅ Xác thực người dùng
+app.UseAuthorization();  // ✅ Cấp quyền
+
+// 8️⃣ Định tuyến
 app.UseEndpoints(endpoints =>
 {
     _ = endpoints.MapControllerRoute(
         name: "Admin",
         pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
     _ = endpoints.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");

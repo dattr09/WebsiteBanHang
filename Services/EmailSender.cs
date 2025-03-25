@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Options;
-using System;
 using System.Net;
 using System.Net.Mail;
-using System.Threading.Tasks;
 using WebsiteBanHang.Models;
 
 public class EmailSender : IEmailSender

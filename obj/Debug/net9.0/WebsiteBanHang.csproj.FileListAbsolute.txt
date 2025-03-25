@@ -2980,7 +2980,9 @@ C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\a3ygkwa5zy-2z0n
 C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
+C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\cqj9zjkuoa-7g0n3y41ew.gz
 C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\ht9a5wx6uj-61n19gt1b8.gz
+C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\0gsegcme76-ahsll5fgkx.gz
 C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\v1dgmto0c6-xtxxf3hu2r.gz
 C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\0wlp2npf9q-agp80tu62r.gz
 C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\qfi5odf45y-st1cbwfwo5.gz
@@ -3055,5 +3057,3 @@ C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\refint\WebsiteBanHang.dll
 C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\WebsiteBanHang.pdb
 C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\WebsiteBanHang.genruntimeconfig.cache
 C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\ref\WebsiteBanHang.dll
-C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\cqj9zjkuoa-7g0n3y41ew.gz
-C:\Users\DatG\Desktop\WebsiteBanHang\obj\Debug\net9.0\compressed\0gsegcme76-ahsll5fgkx.gz
