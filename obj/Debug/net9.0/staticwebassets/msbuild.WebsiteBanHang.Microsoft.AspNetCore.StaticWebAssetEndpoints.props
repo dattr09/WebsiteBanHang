@@ -40,13 +40,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\bugi.jfif'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-f1/\u002B1y4rNMUbKnxF9Ce9RT4\u002B4A\u002BmGaW1yTteBDvc1v4="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5799"},{"Name":"Content-Type","Value":"image/pjpeg"},{"Name":"ETag","Value":"\u0022f1/\u002B1y4rNMUbKnxF9Ce9RT4\u002B4A\u002BmGaW1yTteBDvc1v4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 05:21:28 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5799"},{"Name":"Content-Type","Value":"image/pjpeg"},{"Name":"ETag","Value":"\u0022f1/\u002B1y4rNMUbKnxF9Ce9RT4\u002B4A\u002BmGaW1yTteBDvc1v4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 18:11:44 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/WebsiteBanHang/images/bugi.r53adhm3f4.jfif">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\bugi.jfif'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"r53adhm3f4"},{"Name":"integrity","Value":"sha256-f1/\u002B1y4rNMUbKnxF9Ce9RT4\u002B4A\u002BmGaW1yTteBDvc1v4="},{"Name":"label","Value":"_content/WebsiteBanHang/images/bugi.jfif"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5799"},{"Name":"Content-Type","Value":"image/pjpeg"},{"Name":"ETag","Value":"\u0022f1/\u002B1y4rNMUbKnxF9Ce9RT4\u002B4A\u002BmGaW1yTteBDvc1v4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 05:21:28 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5799"},{"Name":"Content-Type","Value":"image/pjpeg"},{"Name":"ETag","Value":"\u0022f1/\u002B1y4rNMUbKnxF9Ce9RT4\u002B4A\u002BmGaW1yTteBDvc1v4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 18:11:44 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/WebsiteBanHang/images/castrol.ahsll5fgkx.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\castrol.ico'))</AssetFile>
